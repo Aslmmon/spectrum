@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spectrum.services.booking.cleaning.BookCleanConfirmActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg_two" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+
+        android:id="@+id/scroll_view"
+        android:layout_below="@id/appbar"
+        android:layout_above="@id/relative_main_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_smiley"
+            app:cardElevation="2dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:background="@color/colorAccent"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+
+                    android:id="@+id/tv_ref_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Reference ID: REF12345678"
+                    android:textColor="@color/white"
+                    android:padding="8dp"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:layout_below="@id/tv_ref_id"
+                    android:layout_margin="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/iv_status_smiley"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:srcCompat="@drawable/ic_sentiment_satisfied_black_24dp"
+                    />
+                <TextView
+                    android:layout_margin="8dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:id="@+id/tv_thankyou"
+                    android:layout_below="@id/iv_status_smiley"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/status_thankyou"/>
+                <TextView
+                    android:layout_margin="8dp"
+                    android:layout_below="@id/tv_thankyou"
+                    android:id="@+id/tv_check_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Please check your mail"/>
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_below="@id/tv_check_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/greytoo"/>
+
+                <TextView
+                    android:layout_below="@id/view_line"
+                    android:layout_margin="16dp"
+                    android:id="@+id/tv_instrn_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/status_details"/>
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_above="@+id/relative_payment_click"
+            android:id="@+id/relative_main_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_main_vat"
+            android:padding="12dp"
+           >
+
+            <TextView
+                android:id="@+id/textView_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="Total"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp" />
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_vat_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/textView_total"
+                tools:text="(Inclusive of 5% VAT)"/>
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_vat_label"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp">
+                <TextView
+                    android:textColor="@color/colorPrimary"
+                    tools:text="AED 150.00"
+                    android:textSize="24sp"
+                    android:id="@+id/tv_booking_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="42dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/progress_bar_price"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_payment_click"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rect_bg_green"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                tools:text="Make Payment"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomProgressbar"/>
+
+
+
+
+
+</RelativeLayout>

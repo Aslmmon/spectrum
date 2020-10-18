@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_margin="16dp"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select time"
+                android:textAllCaps="true"/>
+            <TextView
+                android:id="@+id/tv_sel_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_title"
+                android:layout_marginTop="8dp"
+                tools:text="2018-02-15"
+                android:textColor="@color/colorAccent"/>
+            <RelativeLayout
+                android:layout_margin="24dp"
+                android:layout_below="@id/tv_sel_date"
+                android:id="@+id/relative_recycler_main"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_clean_book_frag"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ProgressBar
+                    android:layout_margin="60dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+                
+
+            <RelativeLayout
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/relative_recycler_main"
+                android:id="@+id/relative_clean_frag_submit_click"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_bg_white_oneside">
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="submit"
+                    android:textAllCaps="true"/>
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:elevation="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:tint="#9e9e9e"
+        android:id="@+id/iv_time_frag_cancel_click"
+        app:srcCompat="@drawable/ic_cancel_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true" />
+
+
+
+</RelativeLayout>

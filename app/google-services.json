@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "831468042659",
+    "firebase_url": "https://spectrum-app-eca94.firebaseio.com",
+    "project_id": "spectrum-app-eca94",
+    "storage_bucket": "spectrum-app-eca94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831468042659:android:737d2c120e82548d368216",
+        "android_client_info": {
+          "package_name": "com.spectrum.services"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831468042659-pmfvgg73o5v6triv8h8frimbn0g30o8k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spectrum.services",
+            "certificate_hash": "ea85f46a4404a10a66d9dcc6e74d413f616d7bd6"
+          }
+        },
+        {
+          "client_id": "831468042659-eudd1puoad6r052amv7dbo24lrpdmosn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJDka6yD-32h1_dFWzgrBWvZrbQ3KPkjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831468042659-eudd1puoad6r052amv7dbo24lrpdmosn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

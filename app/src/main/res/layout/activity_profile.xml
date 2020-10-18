@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spectrum.services.profile.ProfileActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg_two" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:elevation="0dp"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorAccent"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <androidx.appcompat.widget.Toolbar
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:clickable="true"
+                    android:textSize="16sp"
+                    android:layout_marginRight="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/tv_reset_pwd_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset Password"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_marginTop="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:background="@drawable/round_bg">
+                <ImageView
+                    android:padding="1dp"
+                    android:id="@+id/iv_profile_image"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    app:srcCompat="@drawable/ic_if_user"/>
+                <ImageView
+                    android:id="@+id/iv_edit_profile_pic"
+                    android:visibility="visible"
+                    android:layout_marginLeft="8dp"
+                    android:tint="@color/greyseven"
+                    android:padding="2dp"
+                    android:background="@drawable/round_bg"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    app:srcCompat="@drawable/profile_edit"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:clickable="true"
+                android:visibility="visible"
+                android:id="@+id/iv_profile_edit_click"
+                android:layout_marginRight="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+               android:layout_marginBottom="55dp"
+                android:tint="#fff"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:srcCompat="@drawable/drawer_profile_edit"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/appbar"
+        android:layout_marginTop="-42dp"
+        android:elevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/profile_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/relative_profile_save"
+            >
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="4dp"
+            android:id="@+id/cv_profile"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+
+           >
+            <RelativeLayout
+                android:layout_margin="24sp"
+                android:id="@+id/relative_profile_data_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:id="@+id/relative_pname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                   <TextView
+                        android:textColor="@color/greyfour"
+                       android:textSize="12sp"
+                       android:layout_marginLeft="44dp"
+                       android:layout_alignParentTop="true"
+                       android:id="@+id/pname_label"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Full Name"/>
+                    <RelativeLayout
+                        android:layout_below="@id/pname_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/cus_user"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:inputType="text"
+                            android:background="@null"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_pname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Rahul Raj"
+                            android:hint="enter name"
+                            android:textColorHint="@color/red"
+                            />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:id="@+id/relative_pmobile"
+                    android:layout_below="@id/relative_pname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/pmob_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile Number"/>
+                    <RelativeLayout
+                        android:layout_below="@id/pmob_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/cus_phone"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:inputType="number"
+                            android:background="@null"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_pmob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="+91 9898745632"
+                            android:hint="enter phone "
+                            android:paddingRight="16dp"
+                            android:textColorHint="@color/red"/>
+                        <TextView
+                            android:padding="4dp"
+                            android:background="@drawable/rect_bg_grey"
+                            android:gravity="center"
+                            android:layout_toRightOf="@id/tv_pmob"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:layout_centerVertical="true"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="32dp"
+                           android:layout_alignParentEnd="true"
+                            android:id="@+id/tv_pmob_verfication"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Not verrified !"
+                            android:layout_alignParentRight="true" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/relative_pmobile"
+                    android:padding="5dp"
+                    android:id="@+id/relative_pemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/pemail_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email ID"/>
+                    <RelativeLayout
+                        android:layout_below="@id/pemail_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/cus_mail"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:focusable="false"
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:inputType="none"
+                            android:background="@null"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_pemail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="rahul@gmail.com"/>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/relative_pemail"
+                    android:padding="5dp"
+                    android:id="@+id/relative_parea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/parea_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Area"/>
+                    <RelativeLayout
+                        android:id="@+id/relative_parea_spinner_click"
+                        android:layout_below="@id/parea_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/profile_area"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:visibility="gone"
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_parea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Jumeriah Heights"/>
+                        <Spinner
+                            android:layout_marginLeft="44dp"
+                            android:background="@null"
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/spinner_profile_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:spinnerMode="dialog"/>
+                    </RelativeLayout>
+                    <EditText
+                        android:layout_below="@id/relative_parea_spinner_click"
+                        android:textColor="@drawable/profile_edittext_color"
+                        android:lines="1"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:layout_centerVertical="true"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="44dp"
+                        android:id="@+id/tv_parea_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="enter area"
+                        android:textColorHint="@color/red"
+                        />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_below="@id/relative_parea"
+                    android:padding="5dp"
+                    android:id="@+id/relative_pbuilding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/pbuilding_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Building / Villa"/>
+
+                    <RelativeLayout
+                        android:layout_below="@id/pbuilding_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                       >
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/profile_building" />
+
+                        <EditText
+                            android:id="@+id/tv_pbuilding"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="44dp"
+                            android:background="@null"
+                            android:hint="enter building/villa"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:textSize="16sp"
+                            tools:text="New Villas"
+                            android:textColorHint="@color/red"
+                            />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/relative_pbuilding"
+                    android:padding="5dp"
+                    android:id="@+id/relative_punit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/punit_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unit Number"/>
+                    <RelativeLayout
+                        android:layout_below="@id/punit_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/profile_unit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_punit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="D 106"
+                            android:hint="enter unit"
+                            android:textColorHint="@color/red"/>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_below="@id/relative_punit"
+                    android:padding="5dp"
+                    android:id="@+id/relative_pstreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/greyfour"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="44dp"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/pstreet_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Street Name"/>
+                    <RelativeLayout
+                        android:layout_below="@id/pstreet_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/profile_street"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                        <EditText
+                            android:textColor="@drawable/profile_edittext_color"
+                            android:lines="1"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:layout_centerVertical="true"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="44dp"
+                            android:id="@+id/tv_pstreet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:text="Al Saturn"
+                            android:hint="enter street"
+                            android:textColorHint="@color/red"/>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/relative_profile_save"
+            android:background="@drawable/rect_bg_green"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:textSize="18sp"
+                android:text="Save"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar
+        android:elevation="6dp"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="@style/CustomProgressbar"/>
+
+
+
+
+</RelativeLayout>

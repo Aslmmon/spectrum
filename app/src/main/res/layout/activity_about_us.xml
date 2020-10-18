@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spectrum.services.drawer.AboutUsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg_two" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/logo_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp">
+
+
+                            <ImageView
+                                android:layout_centerInParent="true"
+                                android:id="@+id/imageView3"
+                                android:layout_width="150dp"
+                                android:layout_height="55dp"
+                                android:background="@drawable/logo_spectrum_coloures" />
+
+
+                    </RelativeLayout>
+                    <View
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_below="@id/logo_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/greytoo"/>
+
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@+id/main_title_about_us"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/logo_image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/about_us_title"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/data_basic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/main_title_about_us"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/about_us_content_one"
+                        android:textColor="#9e9e9e" />
+
+
+                    <LinearLayout
+                        android:id="@+id/linear_read_more_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/data_basic"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true">
+
+                        <TextView
+                            android:id="@+id/read_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="3dp"
+                            android:paddingTop="5dp"
+                            android:text="Read More"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:tint="@color/colorAccent"
+                            android:id="@+id/arrow"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            app:srcCompat="@drawable/ic_expand_more_black_24dp"
+                            android:padding="4dp"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                       >
+
+                        <ImageView
+                            android:id="@+id/image_vision"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/aboutus_vision"
+                            android:layout_alignParentLeft="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/image_vision"
+                            android:text="Our Vision"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/image_vision" />
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:tint="@color/colorAccent"
+                            android:id="@+id/arrow_vision"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            app:srcCompat="@drawable/ic_expand_more_black_24dp"
+                            android:layout_alignParentRight="true"
+                            android:padding="4dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_vision_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_vision"
+                       android:layout_margin="8dp"
+                        android:text="@string/about_us_vision"
+                        android:textColor="#9e9e9e" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                       >
+
+                        <ImageView
+                            android:id="@+id/image_mission"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/aboutus_mission"
+                            android:layout_alignParentLeft="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/image_mission"
+                            android:gravity="end"
+                            android:text="Our Mission"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/image_mission" />
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:tint="@color/colorAccent"
+                            android:id="@+id/arrow_misson"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            app:srcCompat="@drawable/ic_expand_more_black_24dp"
+                            android:layout_alignParentRight="true"
+                            android:padding="4dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_mission_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_vision"
+                        android:layout_margin="8dp"
+                        android:text="@string/about_us_mission"
+                        android:textColor="#9e9e9e" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/image_values"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            app:srcCompat="@drawable/aboutus_values"
+                            android:layout_alignParentLeft="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/image_values"
+                            android:text="Our Values"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/image_values" />
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:tint="@color/colorAccent"
+                            android:id="@+id/arrow_values"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            app:srcCompat="@drawable/ic_expand_more_black_24dp"
+                            android:layout_alignParentRight="true"
+                            android:padding="4dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_value_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_vision"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/about_us_values"
+                        android:textColor="#9e9e9e" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

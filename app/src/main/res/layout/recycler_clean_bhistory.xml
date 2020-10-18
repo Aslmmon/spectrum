@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_cleanbhistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:id="@+id/relative_refid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_ref_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:text="Booking Ref No."
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_ref_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_ref_label"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    tools:text="M123457896" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_cleanbhistory_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_refid"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_cleanbhistory_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:text="08 FEB 2018" />
+
+                <ImageView
+                    android:id="@+id/iv_clean_bhistory_status"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_cleanbhistory_date"
+                    android:background="@drawable/round_bg_green"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_check_black_24dp" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_maid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_cbh_maid"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/clean_book_maid" />
+
+                    <TextView
+                        android:id="@+id/tv_cleanbhistory_maid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/iv_cbh_maid"
+                        android:textColor="@color/colorPrimary"
+                        tools:text="2" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_ctype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/iv_cbh_ctype"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/clean_book_type_of_service" />
+
+                    <TextView
+                        android:id="@+id/tv_cleanbhistory_ctype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/iv_cbh_ctype"
+                        android:maxLength="24"
+                        android:textColor="@color/colorPrimary"
+                        tools:text="Home cleaning jdfhkjsdgfjkgdsjkfgdjksgfkdgsfkgdsfkgdskfgdksgfkdsfgdksgfk" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/iv_cbh_material"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/clean_book_cleaning_material" />
+
+                    <TextView
+                        android:id="@+id/tv_cleanbhistory_material"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/iv_cbh_material"
+                        android:textColor="@color/colorPrimary"
+                        tools:text="Yes" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_cleanbhistory_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_cleanbhistory_one"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_cbh_date"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentTop="true"
+                        android:tint="@color/colorAccent"
+                        app:srcCompat="@drawable/maintenance_book_date" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_clean_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_cbh_date" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_cleanbhistory_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_cleanbhistory_two"
+                android:layout_marginTop="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_cleanbhistory_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/button_bg"
+                        android:text="Pay Now"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tv_cleanbhistory_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@id/button_cleanbhistory_pay"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:text="AED 200.00" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

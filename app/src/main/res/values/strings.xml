@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Spectrum</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //fb
+    <string name="facebook_app_id">373696464015509</string>
+    <string name="fb_login_protocol_scheme">fb373696464015509</string>
+    <string name="title_activity_detail_cleaning">DetailCleaningActivity</string>
+
+    //maintenance booking include
+    <string name="m_include_one">Team of 2 handyman</string>
+    <string name="m_include_two"> Basic tools (drill, screws, ladder, etc.) will be brought by the team</string>
+    <string name="m_include_three">Please note that the hourly price does not include materials. You will need to provide the material required for the job</string>
+    <string name="about_us_content_one">Ever since our inception we have been delivering quality cleaning and maintenance services to those who’ve asked these of us. Our cleaning and maintenance ser- vices have made us into what we are today. We have crossed so many milestones and attained this stature only because we have resolved to put the customer  first and display unwavering professionalism in every facet of our being.</string>
+    <string name="about_us_content_full">Ever since our inception we have been delivering quality cleaning and maintenance services to those who’ve asked these of us. Our cleaning and maintenance ser- vices have made us into what we are today. We have crossed so many milestones and attained this stature only because we have resolved to put the customer  first and display unwavering professionalism in every facet of our being.\nSpectrum encompasses everything good about cleaning and we are able to deliver top notch quality to those in need. This is facilitated by a group of skilled pro- fessionals who are very versatile and deft at handling any scenario. This has made it possible for us to incorporate disparate services such as residential cleaning  to babysitting.</string>
+    <string name="about_us_title">We provide holistic cleaning and comprehensive facility management</string>
+    <string name="about_us_vision">We are here to help you solve the issues of cleaning and mainte- nance, and we see ourselves as the people who can shoulder that re- sponsibility for you, giving you time to focus on more pressing mat- ters, while we get on with implementing our first class service to sat- isfy you. We envisage ourselves sitting on the helm of the cleaning  and maintenance industry in Dubai providing quality that none can compete with.</string>
+    <string name="about_us_mission">We have resolved ourselves to carry out top notch cleaning and maintenance to residences and commercial spaces across Dubai, where we take care of every aspect of cleanliness. Our versatility also enables us to take care of your children so as to nurture them when you are away. We promise that in everything that we do, we display perfection.</string>
+    <string name="about_us_values">We have been able to rise steadily throughout the years and bring satisfaction to a lot of our clients, because we have held steadfast these values and have applied them fiercely:</string>
+    <string name="title_activity_service_area">Map</string>
+
+    //contact us
+    <string name="cus_spectrum_address">Office #906, Al Thuraya Telecom Tower, Al Barsha Heights, Tecom, Dubai, UAE</string>
+    <string name="cus_spectrum_pobo">P.O. Box : 128769</string>
+    <string name="cus_spectrum_booking_no_one">For Booking: 800 7274</string>
+    <string name="cus_spectrum_booking_no_two">  /  04 431 0113</string>
+    <string name="cus_spectrum_mail">Email: info@spectrumservices.ae</string>
+    <string name="cus_spectrum_website">Website: www.spectrumservices.ae</string>
+
+    //phone verification
+    <string name="phone_verify_title">We have sent you an access code via SMS for Mobile Number verification </string>
+    <string name="phone_verify_retry">Didn\'t get the code ?</string>
+
+    //booking status
+    <string name="status_thankyou">Dear Customer, We\'ve recieved your booking. \nThank you.</string>
+    <string name="status_details">Please note that we will do our very best to arrive on the given time; nonetheless, due to traffic conditions, please anticipate a maximum of 30 minutes’ delay. Nevertheless, it is guaranteed that we will complete the full hours of booking upon arrival. However, any cancellation with less than 24 hours’ notice is non-refundable.
+
+\n\nFor any questions and clarifications on your booking, please call us at 800 7274 or email us at info@spectrumservices.ae
+</string>
+    <string name="payamount"><b>Amount :</b></string>
+    <string name="title_activity_cancel">CancelActivity</string>
+    <string name="notifications_admin_channel_name">test</string>
+    <string name="notifications_admin_channel_description">test</string>
+</resources>

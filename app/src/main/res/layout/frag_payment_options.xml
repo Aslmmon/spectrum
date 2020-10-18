@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+
+    >
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        app:cardElevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+           >
+            <TextView
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/forget_pwd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Payment Option"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:id="@+id/linear_buttons"
+                android:layout_below="@id/forget_pwd_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_margin="8dp">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/relative_online_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    >
+                    <TextView
+                        android:id="@+id/tv_online_text"
+                        android:textColor="#fff"
+                        android:layout_centerInParent="true"
+                        android:text="credit card"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_marginBottom="8dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/relative_cash_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                   >
+                    <TextView
+                        android:id="@+id/tv_cash_pay"
+                        android:textColor="#fff"
+                        android:layout_centerInParent="true"
+                        android:text="cash"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_below="@id/linear_buttons"
+                android:id="@+id/relative_play_click"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rect_bg_white_oneside">
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Done"
+                    android:textAllCaps="true"/>
+            </RelativeLayout>
+            <ProgressBar
+                android:visibility="gone"
+                android:elevation="2dp"
+                android:id="@+id/progress_bar"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomProgressbar"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:elevation="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/iv_fpwd_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_cancel_24dp"
+        android:tint="#9e9e9e"
+        android:layout_alignParentRight="true" />
+
+
+
+
+</RelativeLayout>

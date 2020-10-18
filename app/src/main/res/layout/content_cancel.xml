@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".drawer.booking_history.CancelActivity"
+    tools:showIn="@layout/activity_cancel">
+
+
+    <LinearLayout
+
+
+        android:id="@+id/cancelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="I agree Terms &amp; Conditions" />
+
+        <TextView
+            android:id="@+id/cancelBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10sp"
+            android:text="Cancel Booking"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cancelLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="For spectrum services all customers are equally important and for your convenience, we offer 24/7 customer service, so that we can provide quick responses to your calls for any feedback or complaints. When you make a booking, we reserve time for you and turn away other potential customers to fulfill our commitment to you. But when we get a sudden request for any cancellation or rescheduling, planning a new schedule becomes quite an impossible thing. And for this reason, spectrum services has come up with some following policies for cancellation and refund procedures:"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                android:padding="10dp"
+                android:text="If you need to cancel your appointment, please contact us at least 24hours in advance since we turn away other clients to reserve time for your cleaning. Any cancellations with less than 24hours notice is non-refundable."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="We request that Saturday clients must make a cancellation request before the close of business on the preceding Thursday."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                android:padding="10dp"
+                android:text="We do provide a rescheduling benefit to our customers, however we require a 12-hour rescheduling notice. For rescheduling an appointment, you can either visit our website or can call our customer care executive directly. There is no charge for rescheduling with 12-hour notice on working days."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="The client is responsible for reporting any incident, breakage, damage and loss within 12 hours of completion of the service. Failure to do so will nullify any claim."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                android:padding="10dp"
+                android:text="The client is responsible for securing - cash, jewellery and any other items of value. Spectrum Cleaning Services pay staff well and have a zero-tolerance policy in terms of theft and dishonesty. No responsibility or liability is however accepted for any of the above."
+                android:textSize="14sp" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="On spot cancellation, the full amount will be charged."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"
+                android:padding="10dp"
+                android:text="Refunds will be done only through the Original Mode of Payment."
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

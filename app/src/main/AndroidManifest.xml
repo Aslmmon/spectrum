@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.spectrum.services">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.READ_SMS" />-->
+    <!--<uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/spectrum_new"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+
+        android:roundIcon="@mipmap/spectrum_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+        <activity
+            android:name=".auth.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <meta-data
+            android:name="com.facebook.sdk.CodelessDebugLogEnabled"
+            android:value="true" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".auth.SignUpActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".booking.cleaning.BookCleaningActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="www.spectrum.com"/>
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".booking.cleaning.BookCleaningDateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".booking.cleaning.BookCleanConfirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".drawer.services.DetailCleaningActivity"
+            android:label="@string/title_activity_detail_cleaning"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.maintenance.BookMaintenanceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".booking.maintenance.BookMaintenanceConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".drawer.services.DetailMaintenanceActivity" />
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:configChanges="keyboardHidden|screenSize" />
+        <activity android:name=".drawer.AboutUsActivity" />
+        <activity android:name=".drawer.faq.FaqActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".drawer.service_area.ServiceAreaActivity"
+            android:label="@string/title_activity_service_area"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".drawer.ContactusActivity" />
+        <activity
+            android:name=".drawer.booking_history.BookingHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".drawer.notifications.NotificationActivity" />
+
+        <activity
+            android:name=".drawer.booking_history.BookingCancelActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".profile.phone_verify.PhoneVerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".services.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".booking.BookingStatusActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".sms.SmsReceiver">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="true" />
+        <activity android:name=".booking.cleaning.PaymentStatusActivity" />
+        <activity
+            android:name=".drawer.ChatActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".booking.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".drawer.booking_history.CancelActivity"
+            android:label="@string/title_activity_cancel"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#355FAC</color>
+    <color name="colorPrimaryDark">#1B4A9D</color>
+    <color name="colorAccent">#2fca78</color>
+
+
+    <color name="fb_button_color">#3B5998</color>
+    <color name="greytoo">#FFE0E0E0</color>
+    <color name="greyseven">#616161</color>
+    <color name="greyfive">#9e9e9e</color>
+    <color name="greysix">#757575</color>
+    <color name="blur_cprimary">#63355fac</color>
+    <color name="greyfour">#bdbdbd</color>
+    <color name="drawer_bg">#aa3b5998</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+
+    <color name="red">#c60e0e</color>
+</resources>

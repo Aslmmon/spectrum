@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spectrum.services.profile.phone_verify.PhoneVerifyActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen_bg_two" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/spectrum_logo"
+            android:layout_margin="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:src="@drawable/spectrum_logo_new_low_res"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_verify"
+            android:layout_below="@id/spectrum_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="4dp">
+
+            <RelativeLayout
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_verify_title"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_verify_title"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:id="@+id/tv_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_verify_title"
+                    android:layout_centerHorizontal="true"
+                    tools:text="8945123647"/>
+                <TextView
+                    android:id="@+id/tv_code_label"
+                    android:layout_below="@id/tv_user_phone"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Code here"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:layout_marginTop="24dp"/>
+                <LinearLayout
+                    android:id="@+id/linear_otp"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/tv_code_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="8dp">
+
+
+                    <EditText
+                        android:id="@+id/et_otp_one"
+                        android:layout_margin="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:elevation="2dp"
+                        android:background="@drawable/rect_bg_white_otp"
+                        android:lines="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_otp_two"/>
+
+
+                    <EditText
+                        android:id="@+id/et_otp_two"
+                        android:layout_margin="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/rect_bg_white_otp"
+                        android:lines="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_otp_three"
+                        />
+                    <EditText
+                        android:id="@+id/et_otp_three"
+                        android:layout_margin="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:elevation="2dp"
+                        android:background="@drawable/rect_bg_white_otp"
+                        android:lines="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_otp_four"/>
+                    <EditText
+                        android:id="@+id/et_otp_four"
+                        android:layout_margin="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:elevation="2dp"
+                        android:background="@drawable/rect_bg_white_otp"
+                        android:lines="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:nextFocusDown="@id/et_otp_five"/>
+                    <EditText
+                        android:id="@+id/et_otp_five"
+                        android:layout_margin="8dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:elevation="2dp"
+                        android:background="@drawable/rect_bg_white_otp"
+                        android:lines="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:inputType="number"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_verify_submit_click"
+                    android:layout_below="@id/linear_otp"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:background="@drawable/button_bg"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_retry_label"
+                    android:layout_below="@id/relative_verify_submit_click"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_verify_retry"
+                    android:gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:id="@+id/linera_retry"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_retry_label"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:id="@+id/relative_verify_retry_click"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:background="@drawable/fb_button_bg"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp">
+                        <TextView
+                            android:layout_margin="8dp"
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Resend Code"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/tv_resend_counter"
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:text="in 30 seconds"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:visibility="gone"
+        android:theme="@style/CustomProgressbar"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

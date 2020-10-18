@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_faq"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="2dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/relative_faq_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                  android:gravity="left"
+                    android:id="@+id/tv_faq_question"
+                    android:textSize="16sp"
+                    android:layout_marginRight="48dp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="dgasjkvajsdfasfdafsdgafsdgfasdgafsdgjfasjdfjsfdajsfdjasfdjasfdajsdfasjdfasjdfasjdfasdfdfjajsdf"/>
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/iv_faq_expand_click"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_expand_more_black_24dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:gravity="left"
+                android:id="@+id/tv_faq_answer"
+                android:layout_below="@id/relative_faq_title"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="scgansbcnvcbmvxcmvsxcvsxncvsxvccvsxvcsxcvnsxcvnccvsxcvbsxcvbvsxbcvbsxvcbsxcbcbvsxbcvsxbcvsxvc"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
