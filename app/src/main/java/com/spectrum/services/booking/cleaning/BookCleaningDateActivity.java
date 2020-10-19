@@ -134,7 +134,7 @@ public class BookCleaningDateActivity extends BaseActivity implements OnDateSele
         //getAllFridays();
         initBookDataRecycler();
         listenersForObservables();
-        logSubscribeEvent("order","USD",210);
+//        logSubscribeEvent("order","USD",210);
     }
 
     private void setupToolbar() {

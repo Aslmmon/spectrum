@@ -20,12 +20,16 @@ import com.google.android.material.snackbar.Snackbar;
 import com.spectrum.services.R;
 import com.spectrum.services.booking.BookingStatusActivity;
 import com.spectrum.services.booking.PaymentActivity;
+import com.spectrum.services.booking.cleaning.BookCleanConfirmActivity;
 import com.spectrum.services.booking.cleaning.BookCleanViewModel;
+import com.spectrum.services.booking.cleaning.BookCleaningActivity;
 import com.spectrum.services.models.CleanBookingRequestModel;
 import com.spectrum.services.models.CleanBookingResponceModel;
 import com.spectrum.services.models.PriceResponseModel;
 import com.spectrum.services.utils.MyApplication;
 import com.spectrum.services.utils.Utils;
+
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -95,7 +99,7 @@ public class PaymentOptionFrag extends DialogFragment {
         requestModel = Utils.convertStringToModel(getArguments().getString("data"), CleanBookingRequestModel.class);
         priceData = Utils.convertStringToModel(getArguments().getString("price"), PriceResponseModel.class);
 
-      //  Log.e(TAG, "onCreate: " + new GsonBuilder().setPrettyPrinting().create().toJson(priceData));
+        //  Log.e(TAG, "onCreate: " + new GsonBuilder().setPrettyPrinting().create().toJson(priceData));
         setStyle(android.app.DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_Holo_Light_Dialog);
 
 
@@ -111,6 +115,8 @@ public class PaymentOptionFrag extends DialogFragment {
 
         relative_done.setOnClickListener(view1 ->
         {
+            ((BookCleanConfirmActivity) Objects.requireNonNull(getActivity())).logpurchase();
+            ((BookCleanConfirmActivity) getActivity()).logInitiateCheckoutEvent("data", "id", "type", 1, true, "USD", 147);
             performBook(requestModel);
         });
 
@@ -154,7 +160,7 @@ public class PaymentOptionFrag extends DialogFragment {
                 intent.putExtra("vat", priceData.getPrice().getVat_percentage());
                 intent.putExtra("type", "clean");
 
-                Log.e(TAG, "handleBookingResponce: "+priceData.getPrice().getVat_percentage() );
+                Log.e(TAG, "handleBookingResponce: " + priceData.getPrice().getVat_percentage());
 
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);

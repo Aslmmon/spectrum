@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
+import com.spectrum.services.BaseActivity;
 import com.spectrum.services.HomeActivity;
 import com.spectrum.services.R;
 import com.spectrum.services.models.UserModel;
@@ -40,7 +41,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends BaseActivity {
 
     public static final String TAG = "message";
     private CallbackManager callbackManager;
@@ -186,6 +187,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void handleClicks() {
         signup_button.setOnClickListener(view -> {
+            logLeadsEvent();
             if (validate(signup_email.getText().toString(), signup_password.getText().toString(), signup_name.getText().toString(), signup_mobile.getText().toString())) {
 
                 registerApi();
@@ -196,6 +198,8 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         fb_signup_button.setOnClickListener(view -> {
+            logLeadsEvent();
+
             facebookCall();
 
         });

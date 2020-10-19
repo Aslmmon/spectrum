@@ -134,6 +134,7 @@ public class BookCleaningActivity extends AppCompatActivity implements BookingEx
         if (!deeplink) apiCallListeners();
 
         if (getPromocode != null) {
+            Log.i("data",getPromocode);
             promocode.setText(getPromocode);
         }
 

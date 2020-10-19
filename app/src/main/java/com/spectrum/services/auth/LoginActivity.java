@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.GsonBuilder;
+import com.spectrum.services.BaseActivity;
 import com.spectrum.services.HomeActivity;
 import com.spectrum.services.R;
 import com.spectrum.services.models.UserModel;
@@ -46,7 +47,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
     public static final String TAG = "message";
     private CallbackManager callbackManager;
@@ -116,12 +117,14 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener(view -> {
             if (validate(login_email.getText().toString(), login_password.getText().toString())) {
                 loginApi();
+                logSubscribeEvent("order","USD",210);
 
             }
 
         });
 
         fb_button.setOnClickListener(view -> {
+            logSubscribeEvent("order","USD",210);
             facebookCall();
 
         });

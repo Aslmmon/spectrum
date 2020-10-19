@@ -35,6 +35,13 @@ public class BaseActivity extends AppCompatActivity {
         params.putString(AppEventsConstants.EVENT_PARAM_CURRENCY, currency);
         logger.logEvent(AppEventsConstants.EVENT_NAME_VIEWED_CONTENT, price, params);
     }
+    /**
+     * This function assumes logger is an instance of AppEventsLogger and has been
+     * created using AppEventsLogger.newLogger() call.
+     */
+    public void logLeadsEvent () {
+        logger.logEvent("leads");
+    }
 
 
     /**

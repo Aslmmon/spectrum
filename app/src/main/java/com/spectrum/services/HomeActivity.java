@@ -73,7 +73,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 import me.relex.circleindicator.CircleIndicator;
 
-public class HomeActivity extends AppCompatActivity
+public class HomeActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public static final String TAG = "message";
     @BindView(R.id.home_bg_viewpager)
@@ -159,16 +159,12 @@ public class HomeActivity extends AppCompatActivity
          * contact
          */
         logger.logEvent(AppEventsConstants.EVENT_NAME_CONTACT);
-
-
     }
 
     private void initSome() {
 
         Log.e(TAG, "package_name: " + package_name);
-
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
-
         prefs = Prefs.with(this);
         setUserData();
 
@@ -544,6 +540,7 @@ public class HomeActivity extends AppCompatActivity
 
     @OnClick(R.id.relative_cleaning_booking)
     public void cleanBook() {
+        logScheduleEvent();
         Intent intent = new Intent(HomeActivity.this, BookCleaningActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -551,6 +548,7 @@ public class HomeActivity extends AppCompatActivity
 
     @OnClick(R.id.relative_maintenance_booking)
     public void maintenanceBook() {
+        logScheduleEvent();
         Intent intent = new Intent(HomeActivity.this, BookMaintenanceActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -558,6 +556,7 @@ public class HomeActivity extends AppCompatActivity
 
     @OnClick(R.id.telephone)
     public void callNow(View view) {
+        logContactEvent();
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:800 7274"));
         startActivity(intent);
@@ -570,6 +569,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     public void mailClick(View view) {
+        logContactEvent();
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:info@spectrumservices.ae"));
         if (intent.resolveActivity(getPackageManager()) != null) {
@@ -578,7 +578,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     public void whatsappClick(View view) {
-
+        logContactEvent();
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://api.whatsapp.com/send?phone=+971 556992200"));
         if (intent.resolveActivity(getPackageManager()) != null) {

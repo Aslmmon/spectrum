@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FORTSDKv1.4.2/FORTSDKv1.4.2.iml" filepath="$PROJECT_DIR$/.idea/modules/FORTSDKv1.4.2/FORTSDKv1.4.2.iml" group="spectrum/FORTSDKv1.4.2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="spectrum/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spectrum.iml" filepath="$PROJECT_DIR$/.idea/modules/spectrum.iml" group="spectrum" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spectrum_user.iml" filepath="$PROJECT_DIR$/.idea/modules/spectrum_user.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FORTSDKv1.4.2/spectrum_user.FORTSDKv1.4.2.iml" filepath="$PROJECT_DIR$/.idea/modules/FORTSDKv1.4.2/spectrum_user.FORTSDKv1.4.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/spectrum_user.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/spectrum_user.app.iml" />
