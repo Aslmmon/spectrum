@@ -162,8 +162,7 @@ public class BookCleanConfirmActivity extends BaseActivity {
         initToolbar();
         initSome();
         actionlisteners();
-        logInitiateCheckoutEvent("data", "id", "type", 1, true, "USD", 147);
-        logpurchase();
+        //logpurchase();
     }
 
     private void initSome() {

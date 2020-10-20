@@ -16,6 +16,7 @@ import com.payfort.fort.android.sdk.base.callbacks.FortCallBackManager;
 import com.payfort.fort.android.sdk.base.callbacks.FortCallback;
 import com.payfort.sdk.android.dependancies.base.FortInterfaces;
 import com.payfort.sdk.android.dependancies.models.FortRequest;
+import com.spectrum.services.BaseActivity;
 import com.spectrum.services.R;
 import com.spectrum.services.booking.cleaning.PaymentStatusActivity;
 import com.spectrum.services.models.payfort.FortTokenResponce;
@@ -32,7 +33,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class PaymentActivity extends AppCompatActivity {
+public class PaymentActivity extends BaseActivity {
     public static final String TAG = "message";
     PayViewModel viewModel;
     @BindView(R.id.progress_bar)
@@ -71,7 +72,8 @@ public class PaymentActivity extends AppCompatActivity {
 
         amount = getIntent().getStringExtra("amount");
         ref_id = getIntent().getStringExtra("ref");
-        vat_perc=getIntent().getStringExtra("vat");
+        vat_perc = getIntent().getStringExtra("vat");
+        logInitiateCheckoutEvent("service", ref_id, "service", 1, true, "AED", Double.parseDouble(amount));
 
         if (amount != null && ref_id != null) {
             initPaymentSdk();
@@ -129,7 +131,7 @@ public class PaymentActivity extends AppCompatActivity {
                                 Object> fortResponseMap) {
                             //TODO: handle me
                             Log.e(TAG, "failure " + fortResponseMap.toString());
-                           // updateServerPayApi(false, fortResponseMap);
+                            // updateServerPayApi(false, fortResponseMap);
                             handlePaymentStatus(fortResponseMap);
                         }
 
@@ -146,7 +148,7 @@ public class PaymentActivity extends AppCompatActivity {
         intent.putExtra("amount", amount);
         intent.putExtra("ref", ref_id);
         intent.putExtra("fort_id", fortResponseMap.get("fort_id") == null ? "" : fortResponseMap.get("fort_id").toString());
-        intent.putExtra("vat",vat_perc);
+        intent.putExtra("vat", vat_perc);
 
         is_proceed_pay = false;
 
@@ -214,18 +216,13 @@ public class PaymentActivity extends AppCompatActivity {
             Log.e(TAG, "handleTokenRequest: success");
             sdkToken = responce.getSdk_token();
 
-            if(viewModel.checkShaResponce(responce))
-            {
+            if (viewModel.checkShaResponce(responce)) {
                 callPayment(sdkToken);
 
+            } else {
+                Snackbar.make(progressBar, "Something went wrong while setting up your payment, Please try again.", Snackbar.LENGTH_SHORT).show();
+                disposable.add(Completable.timer(3, TimeUnit.SECONDS).subscribe(() -> finish()));
             }
-            else
-            {
-                 Snackbar.make(progressBar, "Something went wrong while setting up your payment, Please try again.", Snackbar.LENGTH_SHORT).show();
-                disposable.add(Completable.timer(3,TimeUnit.SECONDS).subscribe(()->finish()));
-            }
-
-
 
 
         } else {
@@ -234,7 +231,6 @@ public class PaymentActivity extends AppCompatActivity {
 
 
     }
-
 
 
     public void callPayment(String sdkToken) {

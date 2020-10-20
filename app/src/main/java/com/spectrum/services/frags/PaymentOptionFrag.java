@@ -115,8 +115,8 @@ public class PaymentOptionFrag extends DialogFragment {
 
         relative_done.setOnClickListener(view1 ->
         {
-            ((BookCleanConfirmActivity) Objects.requireNonNull(getActivity())).logpurchase();
-            ((BookCleanConfirmActivity) getActivity()).logInitiateCheckoutEvent("data", "id", "type", 1, true, "USD", 147);
+            // ((BookCleanConfirmActivity) Objects.requireNonNull(getActivity())).logpurchase();
+          //  ((BookCleanConfirmActivity) getActivity()).logInitiateCheckoutEvent("data", "id", "type", 1, true, "USD", 147);
             performBook(requestModel);
         });
 

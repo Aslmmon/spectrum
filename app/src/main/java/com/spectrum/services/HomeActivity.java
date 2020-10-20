@@ -146,7 +146,7 @@ public class HomeActivity extends BaseActivity
         /**
          * loggers
          */
-        logContactEvent();
+        //logContactEvent();
 
 
     }
